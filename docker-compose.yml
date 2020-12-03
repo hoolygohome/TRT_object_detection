@@ -1,0 +1,8 @@
+version: '3.3'
+
+services:
+  trt:
+    image: openhorizon/aarch64-tx2-tensorrt:latest
+    volumes:
+      - .:/trt
+    working_dir: /trt

@@ -2,3 +2,4 @@ tensor-rt
 *venv
 *helper
 model
+__pycache__
