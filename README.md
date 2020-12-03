@@ -14,6 +14,18 @@ Since the optimization of preprocessing is not ready yet, we don't include image
 </br>
 </br>
 
+## May need to:
+```
+# install 
+pip install --upgrade virtualenv
+
+# create
+virtualenv -p python3 <env-name>
+
+# activate
+source <env-name>/bin/activate
+```
+
 ## Install dependencies
 
 ```C
