@@ -29,6 +29,9 @@ source <env-name>/bin/activate
 ## Install dependencies
 
 ```C
+# Tensorflow installation on Jetson NANO
+https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
+
 $ sudo apt-get install python3-pip libhdf5-serial-dev hdf5-tools
 $ pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==1.13.1+nv19.5 --user
 $ pip3 install numpy pycuda --user
