@@ -148,3 +148,15 @@ sudo tee /etc/docker/daemon.json <<EOF
 }
 EOF
 ```
+
+# Before the installation pycuda
+```
+export CPATH=$CPATH:/usr/local/cuda-10.2/targets/aarch64-linux/include
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda-10.2/targets/aarch64-linux/lib
+
+export CPATH=$CPATH:/usr/local/cuda-10.0/targets/aarch64-linux/include
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda-10.0/targets/aarch64-linux/lib 
+
+```
+
+
