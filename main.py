@@ -110,5 +110,6 @@ for i in range(int(len(output)/model.layout)):
         cv2.putText(ori, COCO_LABELS[label],(xmin+10,ymin+10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
 
 cv2.imwrite("result.jpg", ori)
-cv2.imshow("result", ori)
-cv2.waitKey(0)
+print("done. See result.jpg")
+# cv2.imshow("result", ori)
+# cv2.waitKey(0)
