@@ -2,7 +2,8 @@ version: '3.3'
 
 services:
   trt:
-    image: openhorizon/aarch64-tx2-tensorrt:latest
+    image: nvcr.io/nvidia/l4t-tensorflow:r32.4.4-tf2.3-py3
+    # image: openhorizon/aarch64-tx2-tensorrt:latest
     volumes:
       - .:/trt
     working_dir: /trt
