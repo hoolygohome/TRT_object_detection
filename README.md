@@ -2,6 +2,18 @@
 ```
 https://ngc.nvidia.com/catalog/containers/nvidia:l4t-tensorflow
 docker pull nvcr.io/nvidia/l4t-tensorflow:r32.4.4-tf2.3-py3
+
+# docker commands:
+docker login
+docker ps
+docker commit <container_hash> <repo_name/subname>:<tag>
+docker images
+
+# * some example
+docker commit 4b6f804b5667 hoolygohome/jetson-tf-trt:v1
+docker images
+
+docker build -t hoolygohome/jetson-tf-trt:v1-build .
 ```
 ## Also u can install Visual Studio Code from
 https://update.code.visualstudio.com/1.50.1/linux-deb-arm64/stable
