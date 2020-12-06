@@ -16,6 +16,7 @@ docker images
 docker build -t hoolygohome/jetson-tf-trt:v1-build .
 ```
 ## Also u can install Visual Studio Code from
+https://code.visualstudio.com/docs/supporting/faq#_previous-release-versions
 https://update.code.visualstudio.com/1.50.1/linux-deb-arm64/stable
 
 ===========================================
