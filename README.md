@@ -1,5 +1,12 @@
+## nVidia containers !!!
+```
+https://ngc.nvidia.com/catalog/containers/nvidia:l4t-tensorflow
+docker pull nvcr.io/nvidia/l4t-tensorflow:r32.4.4-tf2.3-py3
+```
+
+===========================================
 TensorRT Python Sample for Object Detection
-======================================
+===========================================
 
 Performance includes memcpy and inference.
 </br>
@@ -119,34 +126,16 @@ After that, TensorRT engine can be created directly with the serialized .bin fil
 </br>
 </br>
 
-## Docker CE (arm64)
+## Docker CE (arm64) & docker-compose
 ```
 #!/bin/bash
-
-sudo apt-get install -y \
-	       apt-transport-https \
-	       ca-certificates \
-	       curl \
-	       gnupg2 \
-	       software-properties-common
-
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-
-echo "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
-
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install -y docker-ce
-
-# allow the current user to use docker as if they were root
+sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose
 sudo usermod -aG docker $USER
-
-# setup plain http access to a LAN docker registry
-sudo tee /etc/docker/daemon.json <<EOF
-{
-  "insecure-registries": ["rock64-01.local:5000","10.0.1.5:5000"]
-}
-EOF
 ```
 
 # Before the installation pycuda
