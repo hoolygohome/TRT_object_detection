@@ -14,6 +14,7 @@ docker commit 4b6f804b5667 hoolygohome/jetson-tf-trt:v1
 docker images
 
 docker build -t hoolygohome/jetson-tf-trt:v1-build .
+docker push hoolygohome/jetson-tf-trt:v1-build
 ```
 ## Also u can install Visual Studio Code from
 https://code.visualstudio.com/docs/supporting/faq#_previous-release-versions
